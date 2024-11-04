@@ -43,13 +43,13 @@
                       {% endif %}
                       <div class="card-body">
                           <h5 class="card-title">{{ tour_package.title }}</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Price: ${{ tour_package.price }}</h6>
+                          <h6 class="card-subtitle mb-2 text-muted">Price: ₹{{ tour_package.price }}</h6>
                           <p class="card-text"><strong>Description:</strong> {{ tour_package.description }}</p>
                           <p class="card-text"><strong>Availability:</strong> {{ tour_package.availability }}</p>
                           <p class="card-text"><strong>Start Date:</strong> {{ tour_package.start_date }}</p>
                           <p class="card-text"><strong>End Date:</strong> {{ tour_package.end_date }}</p>
                           <p class="card-text"><strong>Agency:</strong> {{ tour_package.agency.name }}</p> <!-- Assuming agency has a 'name' field -->
-                          git commit -m "first commit"
+                          
                           <div class="d-flex justify-content-between">
                               <a href="{% url 'tour_package_update' tour_package.pk %}" class="btn btn-warning btn-sm">Edit</a>
                               <form action="{% url 'tour_package_delete' tour_package.pk %}" method="POST" style="display:inline;">
